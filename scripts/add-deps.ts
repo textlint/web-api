@@ -1,8 +1,8 @@
 import fs from "fs";
 import path from "path";
 import { exec } from "child_process";
+import packages from "../src/resources/package-list.json";
 import shellescape = require("shell-escape");
-import { fetchTextlintRules } from "./update-textlint-rule";
 
 const NOW_BUILD = process.env.NOW_BUILD;
 (async () => {
@@ -10,9 +10,8 @@ const NOW_BUILD = process.env.NOW_BUILD;
         return;
     }
     if (NOW_BUILD) {
-
+        console.log("NOW BUILD");
     }
-    const packages = await fetchTextlintRules();
     const packageJSONPath = path.join(__dirname, "../package.json");
     fs.copyFileSync(packageJSONPath, packageJSONPath + ".bak");
     console.log("# Backup package.json.bak");

@@ -40,7 +40,8 @@
     "prepublish": "npm run --if-present build",
     "test": "mocha \"test/**/*.ts\"",
     "watch": "tsc -p . --watch",
-    "now-build": "node --require ts-node/register ./scripts/add-deps.ts",
+    "now-build": "yarn run updateTextlintRule && yarn run now-add-deps",
+    "now-add-deps": "node --require ts-node/register ./scripts/update-textlint-rule.ts",
     "updateTextlintRule": "node --require ts-node/register ./scripts/update-textlint-rule.ts"
   },
   "husky": {

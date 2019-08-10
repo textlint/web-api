@@ -50,8 +50,15 @@ export function isTextlintRulePacakage(name: string) {
     return /^textlint-rule-/.test(name) || /^@.*?\/textlint-rule-/.test(name);
 }
 
+export function createImportsMap(packages: NpmPackage[]): string {
+    return packages.map(pkg => {
+        return `import "${pkg.name}"`;
+    }).join("\n");
+}
+
+const DENY_LIST = ["textlint-rule-languagetool", "textlint-rule-spellchecker", "textlint-rule-helper"];
+
 export async function fetchTextlintRules(): Promise<NpmPackage[]> {
-    const DENY_LIST = ["textlint-rule-languagetool", "textlint-rule-spellchecker"];
     const results: NpmPackage[] = [];
     const limit = 200;
     let from = 0;
@@ -90,6 +97,11 @@ const NOW_BUILD = process.env.NOW_BUILD;
 
     }
     const packages = await fetchTextlintRules();
-    fs.writeFileSync(path.join(__dirname, "../src/resources/package-list.json"), JSON.stringify(packages), "utf-8");
-    console.log(packages);
+    const outputJSONPath = path.join(__dirname, "../src/resources/package-list.json");
+    const importMapPath = path.join(__dirname, "../src/api/textlint/improt-rule.ts");
+    fs.writeFileSync(outputJSONPath, JSON.stringify(packages), "utf-8");
+    console.log(`Update ${outputJSONPath}`);
+    const importCode = createImportsMap(packages);
+    fs.writeFileSync(importMapPath, importCode, "utf-8");
+    console.log(`Update ${importMapPath}`);
 })();

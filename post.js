@@ -3,7 +3,7 @@ const path = require("path");
 const fetch = require("node-fetch");
 const textlintrc = fs.readFileSync(path.join(__dirname, ".textlintrc.json"), "utf-8");
 (async () => {
-    const result = await fetch("http://localhost:3000/", {
+    const result = await fetch("https://textlint-web-api.azu.now.sh", {
         method: "POST",
         headers: {
             "Accept": "application/json",

@@ -85,7 +85,6 @@
   },
   "dependencies": {
     "@0x6b/textlint-rule-normalize-whitespaces": "^1.1.0",
-    "@proofdict/textlint-rule-proofdict": "^3.0.0",
     "@textlint-ja/textlint-rule-morpheme-match": "^1.0.2",
     "@textlint-ja/textlint-rule-no-insert-dropping-sa": "^1.0.1",
     "@textlint-ja/textlint-rule-no-insert-re": "^1.0.0",

@@ -65,7 +65,7 @@ const DENY_LIST = [
     // peer deps
     "textlint-rule-eslint",
     // .cache
-    "textlint-rule-proofdict"
+    "@proofdict/textlint-rule-proofdict"
 ];
 
 

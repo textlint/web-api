@@ -20,7 +20,8 @@ const parseJSON = (body: string): object | Error => {
 const app = Express();
 app.use(bodyParser.json());
 app.get("/", async (_req, res) => {
-    return res.send(`<!DOCTYPE html>
+    res.set("Content-Type", "text/html");
+    return res.status(200).send(`<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>textlint web-api</title>
@@ -45,6 +46,9 @@ const fetch = require("node-fetch");
     console.log(result);
 })();
 </code></pre>
+<footer>
+<a href="https://github.com/textlint/web-api" title="Source Code">https://github.com/textlint/web-api</a>
+</footer>
 </body>
 </html>`);
 

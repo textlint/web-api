@@ -1,19 +1,32 @@
-const fs = require("fs");
-const path = require("path");
 const fetch = require("node-fetch");
-const textlintrc = fs.readFileSync(path.join(__dirname, ".textlintrc.json"), "utf-8");
 (async () => {
-    const API = process.env.NODE_ENV !== "production" ? "http://localhost:3000" : "https://web-api.textlint.now.sh";
-    const result = await fetch(API, {
-        method: "POST",
-        headers: {
-            "Accept": "application/json",
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            textlintrc,
-            text: "This is OK."
-        })
-    }).then(res => res.json());
-    console.log(result);
+    try {
+        const result = await fetch("https://web-api.textlint.now.sh/", {
+            method: "POST",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                textlintrc: {
+                    "rules": {
+                        "sentence-length": {
+                            "max": 5
+                        }
+                    }
+                },
+                text: "- [ ] Todo text"
+            })
+        }).then(res => {
+            if (!res.ok) {
+                return res.text().then(responseText => {
+                    return Promise.reject(new Error(responseText));
+                });
+            }
+            return res.json();
+        });
+        console.log(result);
+    } catch (error) {
+        console.error(error);
+    }
 })();

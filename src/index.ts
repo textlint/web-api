@@ -10,13 +10,6 @@ export const lint = (text: string, textlintrc: object) => {
     const engines = new TextLintEngine(createConfig(textlintrc));
     return engines.executeOnText(text, ".md");
 };
-const parseJSON = (body: string): object | Error => {
-    try {
-        return JSON.parse(body);
-    } catch (error) {
-        return error;
-    }
-};
 const app = Express();
 app.use(bodyParser.json());
 app.get("/", async (_req, res) => {
@@ -54,16 +47,20 @@ const fetch = require("node-fetch");
 
 });
 app.post("/", async (req: Request, res) => {
-    const body: { textlintrc: string, text: string; } = req.body;
+    const body: { textlintrc: object, text: string; } = req.body;
     const text = body.text;
     if (!text) {
-        return res.status(400).send("{ text } not defined");
+        return res.status(400).send({
+            ok: false,
+            message: "{ text } not defined"
+        });
     }
-    const textlintrc = parseJSON(body.textlintrc);
-    if (textlintrc instanceof Error) {
-        return res.status(400).send(`"{ textlintrc } can not parsed"
-        
-${textlintrc.message}`);
+    const textlintrc = body.textlintrc;
+    if (!textlintrc) {
+        return res.status(400).send({
+            ok: false,
+            message: `{ textlintrc } not defined`
+        });
     }
     const [result] = await lint(text, textlintrc);
     return res.send({

@@ -6802,11 +6802,6 @@ textlint-rule-en-max-word-count@^1.0.2:
     textlint-util-to-string "^2.0.1"
     unist-util-map "^1.0.1"
 
-textlint-rule-eslint@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/textlint-rule-eslint/-/textlint-rule-eslint-3.2.0.tgz#f26c279fca6f0784b0b4f2dcaffb0e1f2e4a85ff"
-  integrity sha512-/a5C59Goy7cG77l+MNgq5xHOcM29DTqgmVUXxPaRG77UtWbC1SCbDb9mEIQRJRfoS+3qvnrTcIqMjjWRQe5JJQ==
-
 textlint-rule-first-sentence-length@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/textlint-rule-first-sentence-length/-/textlint-rule-first-sentence-length-1.0.1.tgz#4b3856d9db666a416144b9822c4882a6d602063a"

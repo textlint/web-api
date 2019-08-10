@@ -56,7 +56,7 @@ export function createImportsMap(packages: NpmPackage[]): string {
     }).join("\n");
 }
 
-const DENY_LIST = ["textlint-rule-languagetool", "textlint-rule-spellchecker", "textlint-rule-helper"];
+const DENY_LIST = ["textlint-rule-languagetool", "textlint-rule-spellchecker", "textlint-rule-helper", "textlint-rule-eslint"];
 
 export async function fetchTextlintRules(): Promise<NpmPackage[]> {
     const results: NpmPackage[] = [];

@@ -1,9 +1,7 @@
 {
   "version": 2,
-  "name": "textlint-web-api",
-  "alias": [
-    "textlint-api"
-  ],
+  "name": "api",
+  "scope": "textlint",
   "builds": [
     {
       "src": "src/**/*.ts",

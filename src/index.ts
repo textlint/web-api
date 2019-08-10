@@ -19,6 +19,36 @@ const parseJSON = (body: string): object | Error => {
 };
 const app = Express();
 app.use(bodyParser.json());
+app.get("/", async (_req, res) => {
+    return res.send(`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>textlint web-api</title>
+</head>
+<body>
+<pre><code>
+const fetch = require("node-fetch");
+(async () => {
+    const result = await fetch("https://web-api.textlint.now.sh", {
+        method: "POST",
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            textlintrc: {
+                "no-todo" true
+            },
+            text: "- [ ] Todo text"
+        })
+    }).then(res => res.json());
+    console.log(result);
+})();
+</code></pre>
+</body>
+</html>`);
+
+});
 app.post("/", async (req: Request, res) => {
     const body: { textlintrc: string, text: string; } = req.body;
     const text = body.text;

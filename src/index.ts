@@ -76,7 +76,6 @@ app.use(function(err: any, _req: any, res: any, next: any) {
     if (res.headersSent) {
         return next(err);
     }
-    console.log("next error");
     res.status(500);
     res.render("error", { error: err });
 });

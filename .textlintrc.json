@@ -1,0 +1,7 @@
+{
+  "rules": {
+      "sentence-length": {
+        "max": 5
+      }
+  }
+}

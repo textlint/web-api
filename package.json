@@ -22,7 +22,8 @@
   "files": [
     "bin/",
     "lib/",
-    "src/"
+    "src/",
+    "scripts/"
   ],
   "main": "lib/web-api.js",
   "types": "lib/web-api.d.ts",
@@ -39,7 +40,8 @@
     "prepublish": "npm run --if-present build",
     "test": "mocha \"test/**/*.ts\"",
     "watch": "tsc -p . --watch",
-    "updateTextlintRule": "node --require ts-node/register ./script/update-textlint-rule.ts"
+    "now-build": "node --require ts-node/register ./scripts/add-deps.ts",
+    "updateTextlintRule": "node --require ts-node/register ./scripts/update-textlint-rule.ts"
   },
   "husky": {
     "hooks": {

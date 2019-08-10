@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const fetch = require("node-fetch");
-const textlintrc = fs.readFileSync(path.join(__dirname, ".textlintrc"), "utf-8");
+const textlintrc = fs.readFileSync(path.join(__dirname, ".textlintrc.json"), "utf-8");
 (async () => {
     const result = await fetch("http://localhost:3000/", {
         method: "POST",
@@ -13,6 +13,6 @@ const textlintrc = fs.readFileSync(path.join(__dirname, ".textlintrc"), "utf-8")
             textlintrc,
             text: "これはOKです"
         })
-    });
+    }).then(res => res.json());
     console.log(result);
 })();

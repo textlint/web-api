@@ -2388,13 +2388,6 @@ fault@^1.0.0, fault@^1.0.1:
   dependencies:
     format "^0.2.2"
 
-fetch-ponyfill@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/fetch-ponyfill/-/fetch-ponyfill-4.1.0.tgz#ae3ce5f732c645eab87e4ae8793414709b239893"
-  integrity sha1-rjzl9zLGReq4fkroeTQUcJsjmJM=
-  dependencies:
-    node-fetch "~1.7.1"
-
 fetch-ponyfill@^6.0.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/fetch-ponyfill/-/fetch-ponyfill-6.1.0.tgz#d56cd1e6fc4e50aff8cd4b7701dc42a0cc26f476"
@@ -4634,7 +4627,7 @@ node-fetch-npm@^2.0.2:
     json-parse-better-errors "^1.0.0"
     safe-buffer "^5.1.1"
 
-node-fetch@^1.0.1, node-fetch@~1.7.1:
+node-fetch@^1.0.1:
   version "1.7.3"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
   integrity sha512-NhZ4CsKx7cYm2vSrBAr2PvFOe6sWDf0UYLRqA6svUYg7+/TSfVAu49jYC4BvQ4Sms9SZgdqGBgroqfDhJdTyKQ==
@@ -5317,20 +5310,6 @@ promise-retry@^1.1.1:
   dependencies:
     err-code "^1.0.0"
     retry "^0.10.0"
-
-proofdict-tester@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/proofdict-tester/-/proofdict-tester-1.0.0.tgz#3c2270f6a421c938e3bdaf66da0ccb0211954f45"
-  integrity sha512-8+qXV7EG22fMJlXiAiZVAoXcCe22leEpvkeTXUi8DayTqlUMpR71HH7nrJ85mzl7Td7sN4IWia2lEDmL/vUdnw==
-  dependencies:
-    prh "5.4.3"
-
-proofdict@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/proofdict/-/proofdict-1.2.1.tgz#f6815831b0ab69e81698f3901bc2073ce62b5f1d"
-  integrity sha1-9oFYMbCraegWmPOQG8IHPOYrXx0=
-  dependencies:
-    fetch-ponyfill "^4.1.0"
 
 property-expr@^1.5.0:
   version "1.5.1"
@@ -7621,20 +7600,6 @@ textlint-rule-prh@^5.0.0, textlint-rule-prh@^5.2.0, textlint-rule-prh@^5.2.1:
     prh "^5.4.3"
     textlint-rule-helper "^2.1.1"
     untildify "^3.0.3"
-
-textlint-rule-proofdict@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/textlint-rule-proofdict/-/textlint-rule-proofdict-2.0.4.tgz#207ebed5524e16ddef613a7276226b0cd0dbaff0"
-  integrity sha512-be/dkwwlVLK9lb8Bfo7t8p5QKpf5TdbcbsORFHtmUfTuZ+f7D0YGdYWLkwD1GyUFzh3A69tdhzoZTRfCWeDYvQ==
-  dependencies:
-    "@types/url-join" "^0.8.2"
-    debug "^3.1.0"
-    fetch-ponyfill "^6.0.0"
-    localstorage-ponyfill "^1.0.1"
-    proofdict "^1.2.1"
-    proofdict-tester "^1.0.0"
-    textlint-rule-helper "^2.0.0"
-    url-join "^4.0.0"
 
 textlint-rule-readable-kanji-balance-ja@^0.0.5:
   version "0.0.5"

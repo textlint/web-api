@@ -214,7 +214,6 @@
     "textlint-rule-preset-jtf-style": "^2.3.3",
     "textlint-rule-preset-track": "^1.2.0",
     "textlint-rule-prh": "^5.2.1",
-    "textlint-rule-proofdict": "^2.0.4",
     "textlint-rule-readable-kanji-balance-ja": "^0.0.5",
     "textlint-rule-real-symbols": "^0.1.1",
     "textlint-rule-report-node-types": "^1.1.0",

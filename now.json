@@ -1,7 +1,6 @@
 {
   "version": 2,
   "name": "api",
-  "scope": "textlint",
   "builds": [
     {
       "src": "src/**/*.ts",

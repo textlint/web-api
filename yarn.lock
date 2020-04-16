@@ -61,33 +61,6 @@
     check-more-types "2.24.0"
     lazy-ass "1.6.0"
 
-"@proofdict/tester@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@proofdict/tester/-/tester-3.0.0.tgz#bab8483de78c245c79b423910054dea8ed08995f"
-  integrity sha512-/jcfJXwrZrZIZIsEf1ON3jM6M+M7p0XFzR5uQJ7BfNTM93teh/r8jlc7UL9dNaQA7l/jAzS/UKnsFemvh/zjhA==
-  dependencies:
-    "@proofdict/types" "^3.0.0"
-    prh "5.4.3"
-
-"@proofdict/textlint-rule-proofdict@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@proofdict/textlint-rule-proofdict/-/textlint-rule-proofdict-3.0.0.tgz#63c42a3622d37b149fee78767553cb37df5cbe41"
-  integrity sha512-eN3Ax4AAwWR6LNe5lgZQdZBYXs1EDTaZ4xjJ6wThuR7crHmFrJzE+qgxu2zL9+ivjL8WnOrqe6BJezMOiIto1Q==
-  dependencies:
-    "@proofdict/tester" "^3.0.0"
-    "@textlint/kernel" "^3.0.0"
-    "@types/url-join" "^0.8.2"
-    debug "^3.1.0"
-    fetch-ponyfill "^6.0.0"
-    localstorage-ponyfill "^1.0.1"
-    textlint-rule-helper "^2.0.1"
-    url-join "^4.0.0"
-
-"@proofdict/types@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@proofdict/types/-/types-3.0.0.tgz#93ebd290c23f2fb4cfce0a26b9c4592d465781fa"
-  integrity sha512-azzergSMEpns/3Phao4CGT8nZY6Npv28kK8sfgoOJTu1YNa8oXs//xzIk0yv44OV7PIojBTRFWekw7ifm2Sr/w==
-
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@samverschueren/stream-to-observable/-/stream-to-observable-0.3.0.tgz#ecdf48d532c58ea477acfcab80348424f8d0662f"
@@ -602,11 +575,6 @@
   resolved "https://registry.yarnpkg.com/@types/tough-cookie/-/tough-cookie-2.3.5.tgz#9da44ed75571999b65c37b60c9b2b88db54c585d"
   integrity sha512-SCcK7mvGi3+ZNz833RRjFIxrn4gI1PPR3NtuIS+6vMkvmsGjosqTJwRt5bAEFLRz+wtJMWv8+uOnZf2hi2QXTg==
 
-"@types/url-join@^0.8.2":
-  version "0.8.3"
-  resolved "https://registry.yarnpkg.com/@types/url-join/-/url-join-0.8.3.tgz#135f40a01140ed33b522836e99ed20dfc1056137"
-  integrity sha512-bM7dzLHuCqDNlbeOxvo/KfweN3La4d9C1VFGCgefxiZXn0JcRtyGDwWCSUEO8RrMhnx/LGhDOXP8TTokM1grSA==
-
 JSONStream@^1.3.4:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/JSONStream/-/JSONStream-1.3.5.tgz#3208c1f08d3a4d99261ab64f92302bc15e111ca0"
@@ -841,11 +809,6 @@ ap-style-title-case@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/ap-style-title-case/-/ap-style-title-case-1.1.0.tgz#14266cbaa6b7d17881c09760ca373c45258457e1"
   integrity sha512-2hQDKWPwncNrw01Vkgf0BwFC1OLA8LdVidV0nPlZzSxU1AM/+1s3np0lzy5AXpsM6iyUHPWKGBEUUgcX7UR2Tw==
-
-app-root-path@^2.1.0:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/app-root-path/-/app-root-path-2.2.1.tgz#d0df4a682ee408273583d43f6f79e9892624bc9a"
-  integrity sha512-91IFKeKk7FjfmezPKkwtaRvSpnUc4gDwPAjA1YZ9Gn0q0PPeW+vbeUsZuyDwjI7+QTHhcLen2v25fi/AmhvbJA==
 
 aproba@^1.1.1:
   version "1.2.0"
@@ -2388,13 +2351,6 @@ fault@^1.0.0, fault@^1.0.1:
   dependencies:
     format "^0.2.2"
 
-fetch-ponyfill@^6.0.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/fetch-ponyfill/-/fetch-ponyfill-6.1.0.tgz#d56cd1e6fc4e50aff8cd4b7701dc42a0cc26f476"
-  integrity sha512-bLc7JCjpJZZUXVxbgwUhd72Q19MAokrCXOg/Akq+wl0uFLFLklFdBkZo5OpQ3kLI0oGqrKdx6t5Zo3QwXBRmbQ==
-  dependencies:
-    node-fetch "~2.6.0"
-
 figgy-pudding@^3.4.1, figgy-pudding@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.1.tgz#862470112901c727a0e495a80744bd5baa1d6790"
@@ -2976,9 +2932,9 @@ http-signature@~1.2.0:
     sshpk "^1.7.0"
 
 https-proxy-agent@^2.2.1:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-2.2.2.tgz#271ea8e90f836ac9f119daccd39c19ff7dfb0793"
-  integrity sha512-c8Ndjc9Bkpfx/vCJueCPy0jlP4ccCCSNDp8xwCZzPjKJUm+B+u9WX2x98Qx4n1PiMNTWo3D7KK5ifNV/yJyRzg==
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-2.2.4.tgz#4ee7a737abd92678a293d9b34a1af4d0d08c787b"
+  integrity sha512-OmvfoQ53WLjtA9HeYP9RNrWMJzzAz1JGaSFr1nijg0PVR1JaD/xbJq1mdEIIlxGpXp9eSe/O2LgU9DJmTPd0Eg==
   dependencies:
     agent-base "^4.3.0"
     debug "^3.1.0"
@@ -3881,21 +3837,6 @@ load-plugin@^2.0.0:
     npm-prefix "^1.2.0"
     resolve-from "^5.0.0"
 
-localstorage-memory@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/localstorage-memory/-/localstorage-memory-1.0.3.tgz#566b37968fe0c4d76ba36a6da564fa613945ca72"
-  integrity sha512-t9P8WB6DcVttbw/W4PIE8HOqum8Qlvx5SjR6oInwR9Uia0EEmyUeBh7S+weKByW+l/f45Bj4L/dgZikGFDM6ng==
-
-localstorage-ponyfill@^1.0.1:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/localstorage-ponyfill/-/localstorage-ponyfill-1.0.2.tgz#9ed912441b3ad31ac5219b286268eb92fee4000e"
-  integrity sha512-D2HfgIvSsTaw8sNzhTZJnWFDDMhxqy8FYmX0Y+J/e1//DCQiUTpm4ekjaodDFNr2tXHrE5EiyCrx1agHqRT50g==
-  dependencies:
-    app-root-path "^2.1.0"
-    localstorage-memory "^1.0.3"
-    mkdirp "^0.5.1"
-    node-localstorage "^1.3.1"
-
 locate-path@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-2.0.0.tgz#2b568b265eec944c6d9c0de9c3dbbbca0354cd8e"
@@ -4635,17 +4576,10 @@ node-fetch@^1.0.1:
     encoding "^0.1.11"
     is-stream "^1.0.1"
 
-node-fetch@^2.6.0, node-fetch@~2.6.0:
+node-fetch@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
   integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
-
-node-localstorage@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/node-localstorage/-/node-localstorage-1.3.1.tgz#3177ef42837f398aee5dd75e319b281e40704243"
-  integrity sha512-NMWCSWWc6JbHT5PyWlNT2i8r7PgGYXVntmKawY83k/M0UJScZ5jirb61TLnqKwd815DfBQu+lR3sRw08SPzIaQ==
-  dependencies:
-    write-file-atomic "^1.1.4"
 
 normalize-package-data@^2.3.2, normalize-package-data@^2.3.4, normalize-package-data@^2.5.0:
   version "2.5.0"
@@ -5260,15 +5194,6 @@ prettier@^1.15.2, prettier@^1.18.2:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.18.2.tgz#6823e7c5900017b4bd3acf46fe9ac4b4d7bda9ea"
   integrity sha512-OeHeMc0JhFE9idD4ZdtNibzY0+TPHSpSSb9h8FqtP+YnoZZ1sl8Vc9b1sasjfymH3SonAF4QcA2+mzHPhMvIiw==
 
-prh@5.4.3, prh@^5.4.3:
-  version "5.4.3"
-  resolved "https://registry.yarnpkg.com/prh/-/prh-5.4.3.tgz#d3864a6de2f35c6603e33c700106dce01c22876d"
-  integrity sha512-W5+gzqOrVLKayPh+2QCur7KYZPsLRfDJd4Tyz5lIXAWwqaX/LQ40FX/P3/Hbfgf7w+EQPdR1yOx6BVf+frG40w==
-  dependencies:
-    commandpost "^1.2.1"
-    diff "^3.3.0"
-    js-yaml "^3.9.1"
-
 prh@^0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/prh/-/prh-0.9.0.tgz#ff32e0350f30b321e3d52a043fcf2cc3050fe7c7"
@@ -5291,6 +5216,15 @@ prh@^3.0.1:
   integrity sha512-o+WraRm9LvMeBUbqeTEA8fJ1tQUZ12swFvK65HLuzzQVxIxHjxOQ5IJK1GBcSstT4AuX7kdzl8YoZbEdOLHfaA==
   dependencies:
     commandpost "^1.2.0"
+    js-yaml "^3.9.1"
+
+prh@^5.4.3:
+  version "5.4.3"
+  resolved "https://registry.yarnpkg.com/prh/-/prh-5.4.3.tgz#d3864a6de2f35c6603e33c700106dce01c22876d"
+  integrity sha512-W5+gzqOrVLKayPh+2QCur7KYZPsLRfDJd4Tyz5lIXAWwqaX/LQ40FX/P3/Hbfgf7w+EQPdR1yOx6BVf+frG40w==
+  dependencies:
+    commandpost "^1.2.1"
+    diff "^3.3.0"
     js-yaml "^3.9.1"
 
 process-nextick-args@~2.0.0:
@@ -6104,11 +6038,6 @@ sliced@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/sliced/-/sliced-1.0.1.tgz#0b3a662b5d04c3177b1926bea82b03f837a2ef41"
   integrity sha1-CzpmK10Ewxd7GSa+qCsD+Dei70E=
-
-slide@^1.1.5:
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/slide/-/slide-1.1.6.tgz#56eb027d65b4d2dce6cb2e2d32c4d4afc9e1d707"
-  integrity sha1-VusCfWW00tzmyy4tMsTUr8nh1wc=
 
 smart-buffer@4.0.2:
   version "4.0.2"
@@ -8328,11 +8257,6 @@ urix@^0.1.0:
   resolved "https://registry.yarnpkg.com/urix/-/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
   integrity sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
 
-url-join@^4.0.0:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/url-join/-/url-join-4.0.1.tgz#b642e21a2646808ffa178c4c5fda39844e12cde7"
-  integrity sha512-jk1+QP6ZJqyOiuEI9AEWQfju/nB2Pw466kbA0LEZljHwKeMgd9WrAEgEGxjPDD2+TNbbb37rTyhEfrCXfuKXnA==
-
 url-parse-lax@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/url-parse-lax/-/url-parse-lax-1.0.0.tgz#7af8f303645e9bd79a272e7a14ac68bc0609da73"
@@ -8560,15 +8484,6 @@ wrappy@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
-
-write-file-atomic@^1.1.4:
-  version "1.3.4"
-  resolved "https://registry.yarnpkg.com/write-file-atomic/-/write-file-atomic-1.3.4.tgz#f807a4f0b1d9e913ae7a48112e6cc3af1991b45f"
-  integrity sha1-+Aek8LHZ6ROuekgRLmzDrxmRtF8=
-  dependencies:
-    graceful-fs "^4.1.11"
-    imurmurhash "^0.1.4"
-    slide "^1.1.5"
 
 write-file-atomic@^2.0.0:
   version "2.4.3"
